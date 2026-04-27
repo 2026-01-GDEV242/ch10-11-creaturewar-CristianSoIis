@@ -39,7 +39,6 @@ public abstract class Creature
      * @return a value between 1 and str to be used to cause damage to another creature
      */
     public int attack(){
-        // TODO: implement a damage method
         return Randomizer.nextInt(str);
     }
     
@@ -49,8 +48,7 @@ public abstract class Creature
      * @return true when current hit point level is greater than zero
      */
     public boolean isAlive() {
-        // TODO: implement a method to report if the creature yet lives
-        return (hp > 0); //change this
+        return (hp > 0);   //checks to see if creature is alive
     }
     
     /**
@@ -58,8 +56,7 @@ public abstract class Creature
      * @return true when current hit point level is less than or equal to zero
      */
     public boolean isKnockedOut() {
-        //TODO: implement a method to report if the creature has been killed
-        return (hp <= 0); //change this
+        return (hp <= 0); //need to make sure we account for a value of zero here
     }
     
     
@@ -69,7 +66,6 @@ public abstract class Creature
      * @param damage value to remove from hit point count
      */
     public void takeDamage(int damage) {
-        // TODO: implement this
         hp -= damage;
     }
     
